@@ -27,15 +27,20 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+# user authetication
 gem 'devise', '~> 4.8'
-gem 'cancancan', '~> 3.3'
-gem 'ransack', '~> 2.4', '>= 2.4.2'
-gem 'kaminari', '~> 1.2', '>= 1.2.1'
+# inviting user 
 gem 'devise_invitable', '~> 2.0', '>= 2.0.5'
-gem 'pry'
+# user authorization 
+gem 'cancancan', '~> 3.3'
+# user  searching and sorting
+gem 'ransack', '~> 2.4', '>= 2.4.2'
+# for pagination
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
 end
 
 group :development do
