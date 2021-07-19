@@ -21,8 +21,8 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
-  username: surf
-  password: root
+  username: karma
+  password: 555
 
 development:
   <<: *default
@@ -85,5 +85,4 @@ test:
 production:
   <<: *default
   database: Employee_Management_System_production
-  username: Employee_Management_System
-  password: <%= ENV['EMPLOYEE_MANAGEMENT_SYSTEM_DATABASE_PASSWORD'] %>
+ 
