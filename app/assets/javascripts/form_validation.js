@@ -7,7 +7,7 @@ FormValidation = {
         rules: {
           "name": {
             required: true,
-            name: true
+        
           }, 
           },
         });
