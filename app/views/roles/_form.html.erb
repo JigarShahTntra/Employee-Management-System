@@ -1,0 +1,18 @@
+<%= form_with model: role do |form| %>
+    
+  <div id="form">
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+      <% role.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+  </div>
+  
+    <%= form.submit %>
+
+    <% end %>
+    <script type='text/javascript'>
+    $( document ).ready(function() {
+      FormValidation.validateForm();
+    });
+  </script>
