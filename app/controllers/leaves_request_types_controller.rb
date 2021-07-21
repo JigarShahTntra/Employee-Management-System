@@ -1,4 +1,6 @@
 class LeavesRequestTypesController < ApplicationController
+  before_action :set_leave_request_type, only: %i[edit show destroy update]
+
   def index
     @leaves_request_types = LeaveRequestType.all
   end
@@ -11,9 +13,8 @@ class LeavesRequestTypesController < ApplicationController
 
   def create
     @leave_request_type = LeaveRequestType.new(leave_request_type_params)
-
     if @leave_request_type.save
-      redirect_to @leave_request_type
+      redirect_to leaves_request_types_path
     else
       render :new
     end
@@ -22,8 +23,10 @@ class LeavesRequestTypesController < ApplicationController
   def edit; end
 
   def update
+    @leave_request_type = LeaveRequestType.find(params[:id])
+
     if @leave_request_type.update(leave_request_type_params)
-      redirect_to @leave_request_type
+      redirect_to leaves_request_types_path
     else
       render :edit
     end

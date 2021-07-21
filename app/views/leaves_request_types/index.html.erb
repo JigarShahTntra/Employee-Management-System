@@ -5,8 +5,8 @@
     <table border=1>
         <tr>
             <td><%= leave_request_type.leaverequest_type %></td>
-            <td><%= link_to "Edit", edit_leave_request_type_path(user) %></td>
-            <td><%= link_to "Destroy", leave_request_type_path(user),
+            <td><%= link_to "Edit", edit_leaves_request_type_path(leave_request_type) %></td>
+            <td><%= link_to "Destroy", leaves_request_type_path(leave_request_type),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></td>
         </tr>
