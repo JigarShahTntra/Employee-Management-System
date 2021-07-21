@@ -1,0 +1,15 @@
+<%= form_with model: leave_request_type, url: leaves_request_types_path do |form| %>
+
+  <div>
+  <%=form.label :leaverequest_type %><br>
+  <%=form.text_field :leaverequest_type %>
+  </div>
+  
+  <div>
+  <%= form.submit %>
+  </div>
+  
+  <% end %>
+  
+  
+  

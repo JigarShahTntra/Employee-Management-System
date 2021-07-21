@@ -1,0 +1,17 @@
+<h1>LeavesRequestTypes#index</h1>
+<p>Find me in app/views/leaves_request_types/index.html.erb</p>
+<ul>
+  <% @leaves_request_types.each do |leave_request_type| %>
+    <table border=1>
+        <tr>
+            <td><%= leave_request_type.leaverequest_type %></td>
+            <td><%= link_to "Edit", edit_leave_request_type_path(user) %></td>
+            <td><%= link_to "Destroy", leave_request_type_path(user),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></td>
+        </tr>
+    </table>
+
+  <% end %>
+</ul>
+<%= link_to "New leave_request_type",  new_leaves_request_type_path %>
