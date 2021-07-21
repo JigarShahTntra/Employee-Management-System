@@ -41,7 +41,7 @@ class LeavetypesController < ApplicationController
 
 
   def set_leave
-    @leavetype = Leavetype.find(params[:id])
+    @leavetype = Leavetype.find_by(id: params[:id])
   end
 
   def leave_params
