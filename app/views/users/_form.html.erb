@@ -1,0 +1,38 @@
+<%= form_with(model: user, id: "my_form") do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :employee_code %>
+    <%= form.text_field :employee_code %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select :status, ["Active", "Inactive"] %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<script type='text/javascript'>
+   $(document).on('turbolinks:load', function() {
+      FormValidation.validateForm();
+    });
+</script>
