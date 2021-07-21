@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    Hello Admin!
+    There are some errors in sheet which you have recently uploaded.
+    <% @data.each_with_index do |element, index| %>
+    <%= index+1 %> 
+    Email = <%= element[:email] %>
+    Employee Code = <%= element[:employee_code] %>
+    Erroe message = <%= element[:errors].join(', ') %> <br />
+    <% end %> 
+  </body>
+</html>
+
