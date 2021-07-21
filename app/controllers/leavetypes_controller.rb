@@ -1,10 +1,10 @@
 class LeavetypesController < ApplicationController
+  before_action :set_leave, only: %i[show edit update destroy]
   def index
     @leavetypes = Leavetype.all
   end
 
   def show
-    @leavetype = Leavetype.find(params[:id])
   end
 
   def new
@@ -22,13 +22,10 @@ class LeavetypesController < ApplicationController
   end
 
   def edit
-    @leavetype = Leavetype.find(params[:id])
   end
 
   def update
-    @leavetype = Leavetype.find(params[:id])
-
-    if @leavetype.update(leave_params)
+   if @leavetype.update(leave_params)
       redirect_to @leavetype
     else
       render :edit
@@ -36,13 +33,16 @@ class LeavetypesController < ApplicationController
   end
 
   def destroy
-    @leavetype = Leavetype.find(params[:id])
     @leavetype.destroy
-
     redirect_to root_path
   end
 
   private
+
+
+  def set_leave
+    @leavetype = Leavetype.find(params[:id])
+  end
 
   def leave_params
     params.require(:leavetype).permit(:name)
