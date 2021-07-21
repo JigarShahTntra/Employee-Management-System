@@ -1,15 +1,11 @@
 FormValidation = {
-    validateForm: function () {
-      $('#form').validate({
-        errorElement: 'div',
-        errorClass: 'is-invalid',
-  
-        rules: {
-          "name": {
-            required: true,
-        
-          }, 
-          },
-        });
-    }
+  validateForm: function () {
+    $('#role-form').validate({
+      rules: {
+        "role[name]": {
+          required: true
+        }
+      }
+    });
+  }
 }
