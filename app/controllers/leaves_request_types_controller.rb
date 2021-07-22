@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# this is leaves_request_types controller
 class LeavesRequestTypesController < ApplicationController
   before_action :set_leave_request_type, only: %i[edit show destroy update]
 
