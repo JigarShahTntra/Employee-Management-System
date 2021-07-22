@@ -1,11 +1,8 @@
-<%= form_with model: role, id: 'role-form' do |form| %>
-    
+<%= form_with model: role, id: 'role-form' do |form| %>  
   <div id="form">
     <%= form.label :name %><br>
     <%= form.text_field :name %>
-    <% role.errors.full_messages_for(:name).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+    <%= render "error", role: @role %><br>
   </div>
   <%= form.submit %>
 <% end %>
