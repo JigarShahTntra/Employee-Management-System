@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# leavetype controller
 class LeavetypesController < ApplicationController
   before_action :set_leave, only: %i[show edit update destroy]
   def index
