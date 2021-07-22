@@ -7,8 +7,7 @@ class LeavetypesController < ApplicationController
     @leavetypes = Leavetype.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @leavetype = Leavetype.new
@@ -24,11 +23,10 @@ class LeavetypesController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
-   if @leavetype.update(leave_params)
+    if @leavetype.update(leave_params)
       redirect_to @leavetype
     else
       render :edit
@@ -41,7 +39,6 @@ class LeavetypesController < ApplicationController
   end
 
   private
-
 
   def set_leave
     @leavetype = Leavetype.find_by(id: params[:id])
