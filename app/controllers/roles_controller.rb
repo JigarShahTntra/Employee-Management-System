@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# app/controller/role
 class RolesController < ApplicationController
   before_action :set_role, only: %i[edit show destroy update]
 
