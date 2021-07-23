@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# department/controller
 class DepartmentsController < ApplicationController
   before_action :set_department, only: %i[edit show destroy update]
   def index
