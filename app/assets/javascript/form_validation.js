@@ -8,7 +8,8 @@ FormValidation = {
       rules: {
         "leave_request_type[leaverequest_type]": {
           required: true,
-          lettersonly: true
+          lettersonly: true,
+          maxlength: 30
         }
       }
     });
