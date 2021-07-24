@@ -1,14 +1,15 @@
 <div align=center>
-<br><br>
-<table border=1>
-<tr>
-
-<td><%= @department.name %></td>
-  <td><%= link_to "Edit", edit_department_path(@department) %></td>
-  <td><%= link_to "Destroy", department_path(@department),
+ <br><br>
+   <table border=1>
+    <tr>
+     <td><%= @department.name %></td>
+     <td><%= link_to "Edit", edit_department_path(@department) %></td>
+     <td><%= link_to "Destroy", department_path(@department),
                   method: :delete,
-                  data: { confirm: "Are you sure?" } %></td>
-                  
-</tr>
-</table>
+                  data: { confirm: "Are you sure?" } %></td>            
+    </tr>
+   </table>
+</div>
+<div align="center">
+   <%= link_to "Back", departments_path %>
 </div>
