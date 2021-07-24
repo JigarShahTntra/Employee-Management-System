@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :spreadsheets
   resources :users do
     collection { post :import }
   end

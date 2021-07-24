@@ -9,13 +9,14 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+
   end
 
   def create
     @user = User.new(user_params)
 
     if @user.save
-       redirect_to users_path
+      redirect_to users_path
     else
       render :new
     end
@@ -24,6 +25,7 @@ class UsersController < ApplicationController
   def edit; end
 
   def update
+    @user.sheet.attach.call(params[:sheet])
     if @user.update(user_params)
       redirect_to users_path
     else
@@ -38,8 +40,8 @@ class UsersController < ApplicationController
   end
 
   def import
-    User.import(params[:file])
-    redirect_to users_path, notice: "Users Added Successfully"
+    SpreadsheetJob.perform_later
+    redirect_to users_path, notice: 'Users Added Successfully'
   end
 
   private
@@ -49,6 +51,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :employee_code, :status)
+    params.require(:user).permit(:email, :employee_code, :status, :sheet)
   end
 end
