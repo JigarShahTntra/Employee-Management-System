@@ -2,25 +2,19 @@
 <%= form_with(model: @department, id: "my_form")do |form| %>
   <div>
     <%= form.label :name %><br>
-    <br>
-    <%= form.text_field :name, :class => "required" %>
-    <% @department.errors.full_messages_for(:name).each do |message| %>
-      <div><%= message %></div>
-      <% end %>
+      <br>
+      <%= form.text_field :name %>
+      <%= render "error", department: @department%><br>
   </div>
-  <br>
-  <br>
-  <div>
-    <%= form.submit %>
-  </div>
+      <br>
+      <br>
+      <div>
+      <%= form.submit %>
+</div>
 <% end %>
 <div align=center>
-
 <script type='text/javascript'>
-    $( document ).ready(function() {
-      FormValidation.validateForm();
-    });
-  </script>
-
-
-  
+  $( document ).on('turbolinks:load', function() {
+  FormValidation.validateForm();
+});
+</script>
