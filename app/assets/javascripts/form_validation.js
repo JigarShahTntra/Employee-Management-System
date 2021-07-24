@@ -7,7 +7,8 @@ FormValidation = {
       rules: {
         "role[name]": {
           required: true,
-          lettersonly: true
+          lettersonly: true,
+          maximum: 30
         }
       }
     });
