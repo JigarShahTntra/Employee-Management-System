@@ -2,4 +2,4 @@
 //= require activestorage
 //= require jquery.min
 //= require jquery-validation.min
-//= require form_validation
+//= require form_validation 
