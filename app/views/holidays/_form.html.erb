@@ -4,18 +4,15 @@
       <br>
       <%= form.text_field :name %>
     <br>
-    <% holiday.errors.full_messages_for(:name).each do |message| %>
-        <div><%= message %></div>
-        <% end %>
+   <%= render "error", holiday: @holiday %>
         <br>
       <%= form.label :date %>
       <br>
   <%= form.text_field :date, "data-provide" => 'datepicker' %>
     <br>
-    <% holiday.errors.full_messages_for(:date).each do |message| %>
-        <div><%= message %></div>
-        <% end %>
+  <%= render "errorfordate", holiday: @holiday %>
         <br>
       <%= form.submit %>
   <% end %>
   </div>
+  
