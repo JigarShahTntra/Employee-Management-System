@@ -1,20 +1,13 @@
-<div align=center>
 <%= form_with(model: @department, id: "my_form")do |form| %>
   <div>
     <%= form.label :name %><br>
-      <br>
-      <%= form.text_field :name %>
-      <%= render "error", department: @department%><br>
-  </div>
-      <br>
-      <br>
-      <div>
-      <%= form.submit %>
-</div>
+    <%= form.text_field :name %>
+    <%= render "error", department: @department%><br>
+  <div>
+  <%= form.submit %>
 <% end %>
-<div align=center>
 <script type='text/javascript'>
-  $( document ).on('turbolinks:load', function() {
+  $( document ).ready(function() {
   FormValidation.validateForm();
 });
 </script>
