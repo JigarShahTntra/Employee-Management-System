@@ -1,0 +1,18 @@
+<%= form_with model: leavetype,id: 'leavetype-form' do |form| %>
+    
+  <div id="form">
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+      
+      <%= render "error", leavetype: @leavetype %><br>
+  </div>
+  
+    <%= form.submit %>
+
+    <% end %>
+   
+   <script type='text/javascript'>
+  $( document ).on('turbolinks:load', function() {
+    FormValidation.validateForm();
+  });
+</script>
