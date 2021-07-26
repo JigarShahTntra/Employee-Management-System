@@ -3,9 +3,8 @@
   <div id="form">
       <%= form.label :name %><br>
       <%= form.text_field :name %>
-      <% leavetype.errors.full_messages_for(:name).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
+      
+      <%= render "error", leavetype: @leavetype %><br>
   </div>
   
     <%= form.submit %>
