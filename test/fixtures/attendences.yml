@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  attendence_date: 2021-07-27 12:45:18
+  start_hour: 2021-07-27 12:45:18
+  end_hour: 2021-07-27 12:45:18
+  total_hours: 2021-07-27 12:45:18
+
+two:
+  attendence_date: 2021-07-27 12:45:18
+  start_hour: 2021-07-27 12:45:18
+  end_hour: 2021-07-27 12:45:18
+  total_hours: 2021-07-27 12:45:18
