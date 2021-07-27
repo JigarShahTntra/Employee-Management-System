@@ -1,0 +1,2 @@
+class Regularization < ApplicationRecord
+end
