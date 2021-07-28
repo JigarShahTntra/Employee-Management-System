@@ -11,4 +11,4 @@ Turbolinks.start()
 ActiveStorage.start()
 import "channels"
 require("jquery");
-import 'bootstrap'
+import 'bootstrap';
