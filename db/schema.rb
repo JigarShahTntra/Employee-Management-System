@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_27_082212) do
+ActiveRecord::Schema.define(version: 2021_07_27_102440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 2021_07_27_082212) do
     t.datetime "start_hour"
     t.datetime "end_hour"
     t.datetime "total_hours"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.string "ammount"
+    t.string "description"
+    t.datetime "expense_date"
+    t.string "approved_by"
+    t.datetime "approved_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,6 +48,13 @@ ActiveRecord::Schema.define(version: 2021_07_27_082212) do
 
   create_table "leavetypes", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "notices", force: :cascade do |t|
+    t.text "title"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
