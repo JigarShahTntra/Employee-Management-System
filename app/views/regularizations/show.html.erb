@@ -1,0 +1,12 @@
+<div align=center>
+<table border=1> 
+<tr>
+<td><%= @regularization.reason %></td>
+<td><%= @regularization.start_hour %></td>
+<td><%= @regularization.end_hour %></td>
+<td><%= link_to "Edit", edit_regularization_path(@regularization) %></td>
+<td><%= link_to "Destroy", regularization_path(@regularization), method: :delete,data: { confirm: "Are you sure?" } %></td>
+</tr>
+</table>
+<%= link_to "Back", regularizations_path %>
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reason: MyText
+  start_hour: 2021-07-27 13:09:36
+  end_hour: 2021-07-27 13:09:36
+
+two:
+  reason: MyText
+  start_hour: 2021-07-27 13:09:36
+  end_hour: 2021-07-27 13:09:36

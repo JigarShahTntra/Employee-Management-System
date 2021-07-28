@@ -1,0 +1,15 @@
+<div align=center>
+<h1>regularization</h1>
+<table border=1>
+  <% @regularizations.each do |regularization| %>
+    <tr>
+     <td><%= regularization.reason %></td>
+     <td><%= "#{regularization.start_hour.strftime("%I:%M%p")}" if regularization.start_hour.present?  %></td>
+     <td><%= "#{regularization.end_hour.strftime("%I:%M%p")}" if regularization.end_hour.present?  %></td>
+     <td><%= link_to "Edit", edit_regularization_path(regularization) %></td>
+     <td><%= link_to "Destroy", regularization_path(regularization), method: :delete, data: { confirm: "Are you sure?" } %></td>  
+    </tr>
+  <% end %>
+</table>  
+<%= link_to "New regularization", new_regularization_path%>
+</div>

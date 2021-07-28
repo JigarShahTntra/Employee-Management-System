@@ -1,0 +1,23 @@
+<%= form_with model: regularization,id: 'regularization-form' do |form| %>
+    
+  <div>
+      <%= form.label :reason %>
+      <%= form.text_field :reason %>
+       <%= form.label :start_hour %> 
+      <%= form.text_field :start_hour %>
+       <%= form.label :end_hour %>
+      <%= form.text_field :end_hour %>
+      
+       <%= render "error", regularization: @regularization %><br> 
+  </div>
+  
+    <%= form.submit %>
+
+    <% end %>
+   
+
+   <script type='text/javascript'>
+  $( document ).ready( function() {
+    FormValidation.validateForm();
+  });
+</script>

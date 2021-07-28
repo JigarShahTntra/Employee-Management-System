@@ -1,0 +1,9 @@
+<% regularization.errors.full_messages_for(:reason).each do |message| %>
+  <div><%= message %></div>
+<% end %>
+<% regularization.errors.full_messages_for(:start_hour).each do |message| %>
+  <div><%= message %></div>
+<% end %>
+<% regularization.errors.full_messages_for(:end_hour).each do |message| %>
+  <div><%= message %></div>
+<% end %>
