@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#FeedbacksController 
+# this is for FeedbacksController
 class FeedbacksController < ApplicationController
   before_action :set_feedback, only: %i[edit show destroy update]
 
