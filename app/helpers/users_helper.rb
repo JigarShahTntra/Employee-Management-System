@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# this is for UserHelper
 module UsersHelper
   def check_confirmation(resource)
     devise_mapping.confirmable? && resource.pending_reconfirmation?
@@ -11,7 +14,7 @@ module UsersHelper
     user&.unconfirmed_email? ? user.unconfirmed_email : user.email
   end
 
- # def minimum_password_length(user)
-  #  user.minimum_password_length? ? user.minimum_password_length 
-  #end
+  def minimum_password_length(user)
+    return user.minimum_password_length if user.minimum_password_length?
+  end
 end
