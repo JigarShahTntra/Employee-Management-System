@@ -11,7 +11,7 @@ module UsersHelper
     user&.unconfirmed_email? ? user.unconfirmed_email : user.email
   end
 
-  #def minimum_password_length(user)
-   # user.minimum_password_length? ? user.minimum_password_length 
-  #end
+  def minimum_password_length(user)
+    return user.minimum_password_length if user.minimum_password_length? 
+  end
 end
