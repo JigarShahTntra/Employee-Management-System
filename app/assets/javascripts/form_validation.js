@@ -8,7 +8,7 @@ FormValidation = {
         "role[name]": {
           required: true,
           lettersonly: true,
-          maxlength: 10
+          maxlength: 30
         }
       }
     });

@@ -16,9 +16,9 @@ class RolesController < ApplicationController
 
   def create
     @role = Role.new(role_params)
-
+     
     if @role.save
-      redirect_to @role
+      redirect_to root_path, notice:'this is to create and save the role'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class RolesController < ApplicationController
 
   def update
     if @role.update(role_params)
-      redirect_to @role
+      redirect_to root_path, notice:'this is to edit and update the role'
     else
       render :edit
     end
@@ -36,7 +36,7 @@ class RolesController < ApplicationController
 
   def destroy
     @role.destroy if @role.present?
-    redirect_to root_path
+    redirect_to root_path, notice:'this is to delete the role'
   end
 
   private
