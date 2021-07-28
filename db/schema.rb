@@ -15,31 +15,8 @@ ActiveRecord::Schema.define(version: 2021_07_27_073936) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "attendences", force: :cascade do |t|
-    t.datetime "attendence_date"
-    t.datetime "start_hour"
-    t.datetime "end_hour"
-    t.datetime "total_hours"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "leave_request_types", force: :cascade do |t|
-    t.string "leaverequest_type"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "leavetypes", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "regularization_requests", force: :cascade do |t|
-    t.text "reason"
-    t.datetime "start_hour"
-    t.datetime "end_hour"
+  create_table "leave_types", force: :cascade do |t|
+    t.string "leave_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
