@@ -1,0 +1,13 @@
+<%= form_with model: role, id: 'role-form' do |form| %>  
+  <div id="form">
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <%= render "error", role: @role %><br>
+  </div>
+  <%= form.submit %>
+<% end %>
+<script type='text/javascript'>
+  $( document ).ready(function() {
+    FormValidation.validateForm();
+  });
+</script>
