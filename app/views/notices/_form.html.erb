@@ -1,0 +1,21 @@
+<div>
+ <%= form_with model: notice, id: 'notice-form' do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %><br>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+ <% end %>
+<div>
+
+<script type='text/javascript'>
+$( document ).ready(function() {
+ FormValidation.validateForm();
+});
+</script> 
