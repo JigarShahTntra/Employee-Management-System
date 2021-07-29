@@ -1,0 +1,13 @@
+<div>
+<br><br>
+<table border=1>
+ <tr>
+  <td><%= @notice.title %></td>
+  <td><%= @notice.description %></td>
+  <td><%= link_to "Edit", edit_notice_path(@notice) %></td>
+  <td><%= link_to "Destroy", notice_path(@notice),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></td>
+ </tr>
+</table>
+<div>
