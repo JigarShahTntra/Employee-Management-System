@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to users_path
+      redirect_to users_path, notice: 'Users created Successfully'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   def update
     @user.sheet.attach.call(params[:sheet])
     if @user.update(user_params)
-      redirect_to users_path
+      redirect_to users_path, notice: 'Users updated Successfully'
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy if @user.present?
 
-    redirect_to root_path
+    redirect_to root_path, notice: 'Users deleted Successfully'
   end
 
   def import
