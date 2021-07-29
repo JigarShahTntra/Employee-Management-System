@@ -1,0 +1,22 @@
+<h1>Employees</h1>
+<%= link_to 'Add user', new_user_path %> |
+<%= link_to 'Bulk upload', new_spreadsheet_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Employee code</th>
+      <th>Details</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.employee_code %></td>
+        <td><%= link_to 'Details', user_path(user) %></td>
+        <td><%= user.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>

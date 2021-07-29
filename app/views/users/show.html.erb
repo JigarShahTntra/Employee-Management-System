@@ -1,0 +1,14 @@
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+<p>
+  <strong>Employee code:</strong>
+  <%= @user.employee_code %>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%= @user.status %>
+</p>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

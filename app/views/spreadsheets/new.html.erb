@@ -1,0 +1,6 @@
+<h3>Bulk Upload</h3>
+ <%= form_with(model: @spreadsheet) do |form| %>
+  <%= form.file_field :sheet %>
+  <%= form.submit %>
+ <% end %> <br />
+<%= link_to 'Back', users_path %>
