@@ -18,7 +18,7 @@ class FeedbacksController < ApplicationController
     @feedback = Feedback.new(feedback_params)
 
     if @feedback.save
-      redirect_to feedbacks_path
+      redirect_to feedbacks_path, notice: 'this is creating feedback'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class FeedbacksController < ApplicationController
 
   def update
     if @feedback.update(feedback_params)
-      redirect_to feedbacks_path
+      redirect_to feedbacks_path, notice: 'this is updating feedback'
     else
       render :edit
     end
