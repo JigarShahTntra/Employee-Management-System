@@ -16,7 +16,7 @@ class DepartmentsController < ApplicationController
   def create
     @department = Department.new(department_params)
     if @department.save
-      redirect_to @department
+      redirect_to root_path, notice: 'this is to create and save department'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class DepartmentsController < ApplicationController
 
   def update
     if @department.update(department_params)
-      redirect_to @department
+      redirect_to root_path, notice: 'this is to edit and update department'
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class DepartmentsController < ApplicationController
 
   def destroy
     @department.destroy if @department.present?
-    redirect_to root_path
+    redirect_to root_path, notice: 'this is to delete department'
   end
 
   private
