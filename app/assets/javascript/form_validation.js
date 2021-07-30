@@ -2,7 +2,7 @@ FormValidation = {
   validateForm: function () {
     jQuery.validator.addMethod("lettersonly", function (value, element) {
       return this.optional(element) || /^[a-z]+$/g.test(value);
-    }, " small-letters only please");
+    }, " only allowed small letters,please!");
 
     $('#leave_request_type-form').validate({
       rules: {

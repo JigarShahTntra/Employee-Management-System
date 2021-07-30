@@ -1,19 +1,19 @@
-<%= form_with(model: leave_request_type, id: 'leave_request_type-form', url: url, method: method)  do |form| %>
 
+<%= form_with(model: leave_request_type, id: 'leave_request_type-form', url: url, method: method)  do |form| %>
   <div>
-  <%=form.label :leaverequest_type %><br>
-  <%=form.text_field :leaverequest_type %>
+   <%=form.label :leaverequest_type %><br>
+   <%=form.text_field :leaverequest_type %>
   </div>
   
   <div>
-  <%= form.submit %>
+   <%= form.submit %>
   </div>
   
   <% end %>
   
   <script type='text/javascript'>
-   $( document ).ready(function() {
-    FormValidation.validateForm();
-  });
+    $( document ).ready(function() {
+     FormValidation.validateForm();
+    });
   </script>  
   
