@@ -1,0 +1,18 @@
+<%= form_with model: feedback,id:'feedback-form' do |form| %>
+  <div>
+    <%= form.label :Feedback %><br>
+    <%= form.text_area :description %>
+    <%= render "error", feedback: @feedback %><br>
+  </div>
+  
+  <div>
+    <%= form.submit %>
+  </div>
+  <% end %>
+
+<script type='text/javascript'>
+
+ $( document ).ready(function() {
+    FormValidation.validateForm();
+ });
+</script>
