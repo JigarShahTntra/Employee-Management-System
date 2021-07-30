@@ -3,6 +3,7 @@
   <div>
    <%=form.label :leaverequest_type %><br>
    <%=form.text_field :leaverequest_type %>
+   <%= render "error", leave_request_type: @leave_request_type %><br>
   </div>
   
   <div>

@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# this is for routes
 Rails.application.routes.draw do
   root 'leaves_request_types#index'
   resources :leaves_request_types
