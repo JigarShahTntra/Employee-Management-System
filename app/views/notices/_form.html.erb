@@ -2,13 +2,10 @@
  <%= form_with model: notice, id: 'notice-form' do |form| %>
   <div>
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </div>
-  <div>
+    <%= form.text_field :title %><br>
     <%= form.label :description %><br>
     <%= form.text_area :description %><br>
-  </div>
-  <div>
+    <%= render "error", notice: @notice %><br>
     <%= form.submit %>
   </div>
  <% end %>
@@ -16,6 +13,6 @@
 
 <script type='text/javascript'>
   $( document ).ready(function() {
-  FormValidation.validateForm();
-});
+   FormValidation.validateForm();
+  });
 </script> 
