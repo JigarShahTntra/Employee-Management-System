@@ -1,0 +1,16 @@
+<div align=center>
+ <h1>Notices</h1>
+  <% @notices.each do |notice| %>
+   <table border=1>
+     <tr>
+        <td><%= notice.title %></td>
+        <td><%= notice.description %></td>
+        <td><%= link_to "Edit", edit_notice_path(notice) %></td>
+        <td><%= link_to "Destroy", notice_path(notice),
+                   method: :delete,
+                   data: { confirm: "Are you sure?" } %></td>
+     </tr>
+   </table>
+  <% end %>
+ <%= link_to "New Notice", new_notice_path %>
+</div>
