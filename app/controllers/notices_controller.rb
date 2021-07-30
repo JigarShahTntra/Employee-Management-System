@@ -17,7 +17,7 @@ class NoticesController < ApplicationController
   def create
     @notice = Notice.new(notice_params)
     if @notice.save
-      redirect_to notices_path, notice: 'this is for create'
+      redirect_to notices_path, notice: 'this is for creating notice'
     else
       render :new
     end
@@ -27,7 +27,7 @@ class NoticesController < ApplicationController
 
   def update
     if @notice.update(notice_params)
-      redirect_to notices_path, notice: 'this is for update'
+      redirect_to notices_path, notice: 'this is for updatting notice'
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class NoticesController < ApplicationController
 
   def destroy
     @notice.destroy if @notice.present?
-    redirect_to root_path, notice: 'this is for destroy'
+    redirect_to root_path, notice: 'this is for destroying notice'
   end
 
   private

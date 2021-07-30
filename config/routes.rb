@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# this is for routes
 Rails.application.routes.draw do
   root 'notices#index'
   resources :notices
