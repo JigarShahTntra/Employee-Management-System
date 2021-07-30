@@ -2,6 +2,7 @@
   <div>
     <%= form.label :Feedback %><br>
     <%= form.text_area :description %>
+    <%= render "error", feedback: @feedback %><br>
   </div>
   
   <div>
