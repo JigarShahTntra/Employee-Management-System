@@ -1,0 +1,20 @@
+
+<%= form_with(model: leave_request_type, id: 'leave_request_type-form', url: url, method: method)  do |form| %>
+  <div>
+   <%=form.label :leaverequest_type %><br>
+   <%=form.text_field :leaverequest_type %>
+   <%= render "error", leave_request_type: @leave_request_type %><br>
+  </div>
+  
+  <div>
+   <%= form.submit %>
+  </div>
+  
+  <% end %>
+  
+  <script type='text/javascript'>
+    $( document ).ready(function() {
+     FormValidation.validateForm();
+    });
+  </script>  
+  
