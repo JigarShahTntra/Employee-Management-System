@@ -1,0 +1,18 @@
+<div align=center>
+<h1>leave</h1>
+<table border=1>
+  <% @leaves.each do |leave| %>
+  <tr>
+  <td><%= leave.name %></td>
+  <td><%= leave.leavetype.name %></td>
+  <td><%= leave.startdate.strftime("%d/%m/%Y")  %></td>
+  <td><%= leave.enddate.strftime("%d/%m/%Y")  %></td>
+  <td><%= leave.reason %></td>
+  <td><%= leave.notify %></td>
+  <td><%= link_to "Edit", edit_leafe_path(leave) %></td>
+  <td><%= link_to "Destroy", leafe_path(leave),method: :delete, data: { confirm: "Are you sure?" } %></td>  
+  </tr>
+  <% end %>
+</table>
+<%= link_to "New leave",new_leafe_path%>
+</div>

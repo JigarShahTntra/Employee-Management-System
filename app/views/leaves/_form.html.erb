@@ -1,0 +1,23 @@
+<%= form_with model: leave,id: 'leave-form' do |form| %>
+<div>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :leavetype %>
+  <%= form.collection_select :leavetype_id, Leavetype.order(:name), :id, :name %>
+  <%= form.label :startdate %>
+  <%= form.date_field :startdate, class: 'form-control', id: :startdate %>
+  <%= form.label :enddate %>
+  <%= form.date_field :enddate, class: 'form-control', id: :enddate %>
+  <%= form.label :reason %>
+  <%= form.text_field :reason %>
+  <%= form.label :notify %>
+  <%= form.text_field :notify %>
+  <%= render "error", leave: @leave %><br>
+</div>
+<%= form.submit %>
+<% end %>
+<script type='text/javascript'>
+  $(document).ready(function () {
+    FormValidation.validateForm();
+  });
+</script>
