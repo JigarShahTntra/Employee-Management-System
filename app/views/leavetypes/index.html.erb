@@ -1,17 +1,13 @@
 <div align=center>
 <h1>leavetype</h1>
-
 <table border=1>
-  <% @leavetypes.each do |leavetype| %>
-    <tr>
-    <td><%= link_to leavetype.name, leavetype %></td>
-    <td><%= link_to "Edit", edit_leavetype_path(leavetype) %></td>
-    <td><%= link_to "Destroy", leavetype_path(leavetype),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %></td>  
-    </tr>
-  <% end %>
+<% @leavetypes.each do |leavetype| %>
+  <tr>
+  <td><%= link_to leavetype.name, leavetype %></td>
+  <td><%= link_to "Edit", edit_leavetype_path(leavetype) %></td>
+  <td><%= link_to "Destroy", leavetype_path(leavetype),method: :delete, data: { confirm: "Are you sure?" } %></td>  
+  </tr>
+<% end %>
 </table>
-
 <%= link_to "New Leavetype", new_leavetype_path%>
 </div>

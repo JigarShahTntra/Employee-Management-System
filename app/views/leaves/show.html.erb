@@ -1,0 +1,15 @@
+<div align=center>
+<table border=1> 
+<tr>
+<td><%= @leave.name %></td>
+<td><%= @leave.leavetype.name %></td>
+<td><%= @leave.startdate %></td>
+<td><%= @leave.enddate %></td>
+<td><%= @leave.reason %></td>
+<td><%= @leave.notify %></td>
+  <td><%= link_to "Edit", edit_leafe_path(@leave) %></td>
+  <td><%= link_to "Destroy", leafe_path(@leave), method: :delete, data: { confirm: "Are you sure?" } %></td>
+</tr>
+</table>
+<%= link_to "Back", leaves_path%>
+</div>
