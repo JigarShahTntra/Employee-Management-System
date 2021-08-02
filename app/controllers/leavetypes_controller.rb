@@ -17,7 +17,7 @@ class LeavetypesController < ApplicationController
     @leavetype = Leavetype.new(leave_params)
 
     if @leavetype.save
-      redirect_to @leavetype
+      redirect_to @leavetype, notice: 'created new leavetype'
     else
       render :new
     end
@@ -27,7 +27,7 @@ class LeavetypesController < ApplicationController
 
   def update
     if @leavetype.update(leave_params)
-      redirect_to @leavetype
+      redirect_to @leavetype, notice: 'update leavetype'
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class LeavetypesController < ApplicationController
 
   def destroy
     @leavetype.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: 'destory leavetype'
   end
 
   private

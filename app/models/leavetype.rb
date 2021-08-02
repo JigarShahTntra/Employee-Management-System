@@ -3,6 +3,6 @@
 # leavtype model
 class Leavetype < ApplicationRecord
   validates :name, presence: true
-  validates :name, format: { with: /\A[a-zA-Z]+\z/,
-                             message: 'only allows small-letters' }
+  validates :name, format: { with: /\A[a-zA-Z]+\z/, message: 'only allows small-letters' }
+  has_many  :leaves
 end
