@@ -2,14 +2,9 @@
 <table border=1> 
 <tr>
 <td><%= @leavetype.name %></td>
-
-
   <td><%= link_to "Edit", edit_leavetype_path(@leavetype) %></td>
-  <td><%= link_to "Destroy", leavetype_path(@leavetype),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %></td>
+  <td><%= link_to "Destroy", leavetype_path(@leavetype),method: :delete,data: { confirm: "Are you sure?" } %></td>
 </tr>
 </table>
 <%= link_to "Back", leavetypes_path %>
-
 </div>
