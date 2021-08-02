@@ -1,0 +1,15 @@
+<% leave.errors.full_messages_for(:name).each do |message| %>
+  <div><%= message %></div>
+<% end %>
+<% leave.errors.full_messages_for(:startdate).each do |message| %>
+  <div><%= message %></div>
+<% end %>
+<% leave.errors.full_messages_for(:enddate).each do |message| %>
+  <div><%= message %></div>
+<% end %>
+<% leave.errors.full_messages_for(:reason).each do |message| %>
+  <div><%= message %></div>
+<% end %>
+<% leave.errors.full_messages_for(:notify).each do |message| %>
+  <div><%= message %></div>
+<% end %>
